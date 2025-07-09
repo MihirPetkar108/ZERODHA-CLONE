@@ -15,10 +15,78 @@ code {
 /* Navbar */
 .nav-link {
     margin-left: 40px;
+    font-weight: 400 !important;
+    color: #666 !important;
+}
+
+.nav-link:hover {
+    color: #387ed1 !important;
 }
 
 /* Footer */
 .footer-a:hover {
     color: #387ed1 !important;
-    cursor: pointer;
+}
+
+.footer-link {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.footer-link:hover {
+    color: #387ed1 !important;
+}
+
+.footer-p {
+    color: #387ed1 !important;
+}
+
+.footer-p:hover {
+    color: black !important;
+}
+
+/* Product Link */
+
+.leftSectionLink:hover {
+    color: #424242 !important;
+}
+
+/* Brokerage */
+
+.brokerageLink:hover {
+    color: #666 !important;
+}
+
+/* Support */
+
+#supportHero {
+    background-color: #387ed1;
+    color: white;
+}
+
+#supportHero a {
+    color: white;
+}
+
+#supportHero a:hover {
+    opacity: 0.75;
+}
+
+#supportWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
+}
+
+#supportHero input {
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.createTicketLink:hover {
+    color: #666 !important;
 }
