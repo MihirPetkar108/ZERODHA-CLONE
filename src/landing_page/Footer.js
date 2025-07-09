@@ -1,7 +1,7 @@
 import React from "react";
+import { nanoid } from "nanoid";
 
 function Footer() {
-    // Arrays of link titles for each section
     const accountLinks = [
         "Open demat account",
         "Minor demat account",
@@ -43,10 +43,14 @@ function Footer() {
 
     const renderColumn = (title, links) => (
         <div className="col">
-            <p>{title}</p>
-            {links.map((text, idx) => (
+            <p style={{ color: "#444" }}>
+                <b>
+                    <u>{title}</u>
+                </b>
+            </p>
+            {links.map((text) => (
                 <a
-                    key={idx}
+                    key={nanoid()}
                     href=""
                     className="d-block mb-3 text-muted footer-a"
                     style={{
@@ -101,22 +105,37 @@ function Footer() {
                         Cross, Dollars Colony, Opp. Clarence Public School, J.P
                         Nagar 4th Phase, Bengaluru - 560078, Karnataka, India.
                         For any complaints pertaining to securities broking
-                        please write to complaints@zerodha.com, for DP related
-                        to dp@zerodha.com. Please ensure you carefully read the
-                        Risk Disclosure Document as prescribed by SEBI | ICF
+                        please write to{" "}
+                        <a href="" className="footer-p">
+                            complaints@zerodha.com
+                        </a>
+                        , for DP related to{" "}
+                        <a href="" className="footer-p">
+                            dp@zerodha.com
+                        </a>
+                        . Please ensure you carefully read the Risk Disclosure
+                        Document as prescribed by SEBI | ICF
                     </p>
 
                     <p>
-                        Procedure to file a complaint on SEBI SCORES: Register
-                        on SCORES portal. Mandatory details for filing
-                        complaints on SCORES: Name, PAN, Address, Mobile Number,
-                        E-mail ID. Benefits: Effective Communication, Speedy
-                        redressal of the grievances
+                        Procedure to file a complaint on{" "}
+                        <a href="" className="footer-p">
+                            SEBI SCORES
+                        </a>
+                        : Register on SCORES portal. Mandatory details for
+                        filing complaints on SCORES: Name, PAN, Address, Mobile
+                        Number, E-mail ID. Benefits: Effective Communication,
+                        Speedy redressal of the grievances
                     </p>
 
                     <p>
-                        Smart Online Dispute Resolution | Grievances Redressal
-                        Mechanism
+                        <a href="" className="footer-p">
+                            Smart Online Dispute Resolution
+                        </a>{" "}
+                        |{" "}
+                        <a href="" className="footer-p">
+                            Grievances Redressal Mechanism{" "}
+                        </a>
                     </p>
 
                     <p>
@@ -155,9 +174,42 @@ function Footer() {
                         remain in your bank account. As a business we don't give
                         stock tips, and have not authorized anyone to trade on
                         behalf of others. If you find anyone claiming to be part
-                        of Zerodha and offering such services, please create a
-                        ticket here.
+                        of Zerodha and offering such services, please{" "}
+                        <a href="" className="footer-p">
+                            create a ticket here.
+                        </a>
                     </p>
+                </div>
+                <div className="row mb-3 text-center text-muted">
+                    <span className="">
+                        <a href="" className="footer-link">
+                            NSE
+                        </a>
+                        <a href="" className="footer-link">
+                            BSE
+                        </a>
+                        <a href="" className="footer-link">
+                            MCX
+                        </a>
+                        <a href="" className="footer-link">
+                            Terms & conditions
+                        </a>
+                        <a href="" className="footer-link">
+                            Policies & procedures
+                        </a>
+                        <a href="" className="footer-link">
+                            Privacy policy
+                        </a>
+                        <a href="" className="footer-link">
+                            Disclosure
+                        </a>
+                        <a href="" className="footer-link">
+                            For investor's attention
+                        </a>
+                        <a href="" className="footer-link">
+                            Investor charter
+                        </a>
+                    </span>
                 </div>
             </div>
         </footer>
