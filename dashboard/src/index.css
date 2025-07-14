@@ -724,6 +724,13 @@ hr {
     display: none;
 }
 
+.actions .action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 10px;
+}
+
 .actions span button {
     width: 40px;
     height: 30px;
@@ -737,7 +744,8 @@ hr {
     background-color: #4184f3;
     color: #fff;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
     border: 0.7px solid #4184f3;
 }
 
@@ -745,13 +753,15 @@ hr {
     background-color: #ff5722;
     color: #fff;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
     border: 0.7px solid #ff5722;
 }
 
 .action {
     background-color: #fff;
     border: 0.7px solid #9b9b9b;
+    font-size: 0.1rem;
 }
 
 .icon {

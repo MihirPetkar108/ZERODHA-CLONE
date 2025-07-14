@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
-    const [selectedMenu, setSelectedMenu] = useState(0);
     const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-
-    const handleMenuClick = (index) => {
-        setSelectedMenu(index);
-    };
 
     const handleProfileClick = () => {
         setIsProfileDropdownOpen(!isProfileDropdownOpen);
@@ -16,20 +11,18 @@ const Menu = () => {
     const menuClass = "menu";
     const activeMenuClass = "menu selected";
 
+    const currentPath = window.location.pathname;
+
     return (
         <div className="menu-container">
             <img src="logo.png" alt="Logo" style={{ width: "35px" }} />
             <div className="menus">
                 <ul>
                     <li>
-                        <Link
-                            style={{ textDecoration: "none" }}
-                            to="/"
-                            onClick={() => handleMenuClick(0)}
-                        >
+                        <Link style={{ textDecoration: "none" }} to="/">
                             <p
                                 className={
-                                    selectedMenu === 0
+                                    currentPath === "/"
                                         ? activeMenuClass
                                         : menuClass
                                 }
@@ -39,14 +32,10 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            style={{ textDecoration: "none" }}
-                            to="/orders"
-                            onClick={() => handleMenuClick(1)}
-                        >
+                        <Link style={{ textDecoration: "none" }} to="/orders">
                             <p
                                 className={
-                                    selectedMenu === 1
+                                    currentPath === "/orders"
                                         ? activeMenuClass
                                         : menuClass
                                 }
@@ -56,14 +45,10 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            style={{ textDecoration: "none" }}
-                            to="/holdings"
-                            onClick={() => handleMenuClick(2)}
-                        >
+                        <Link style={{ textDecoration: "none" }} to="/holdings">
                             <p
                                 className={
-                                    selectedMenu === 2
+                                    currentPath === "/holdings"
                                         ? activeMenuClass
                                         : menuClass
                                 }
@@ -76,11 +61,10 @@ const Menu = () => {
                         <Link
                             style={{ textDecoration: "none" }}
                             to="/positions"
-                            onClick={() => handleMenuClick(3)}
                         >
                             <p
                                 className={
-                                    selectedMenu === 3
+                                    currentPath === "/positions"
                                         ? activeMenuClass
                                         : menuClass
                                 }
@@ -90,14 +74,10 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            style={{ textDecoration: "none" }}
-                            to="/funds"
-                            onClick={() => handleMenuClick(4)}
-                        >
+                        <Link style={{ textDecoration: "none" }} to="/funds">
                             <p
                                 className={
-                                    selectedMenu === 4
+                                    currentPath === "/funds"
                                         ? activeMenuClass
                                         : menuClass
                                 }
@@ -107,14 +87,10 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            style={{ textDecoration: "none" }}
-                            to="/apps"
-                            onClick={() => handleMenuClick(5)}
-                        >
+                        <Link style={{ textDecoration: "none" }} to="/apps">
                             <p
                                 className={
-                                    selectedMenu === 5
+                                    currentPath === "/apps"
                                         ? activeMenuClass
                                         : menuClass
                                 }
