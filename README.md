@@ -2,7 +2,7 @@
 
 ## A FULL STACK STOCK TRADING AND MONITORING PLATFORM
 
-This is a full-stack web application inspired by [Zerodha](https://zerodha.com/), built to simulate a real-time stock trading and monitoring experience. It includes user onboarding, stock visualization, market monitoring, portfolio management, and more — all powered by the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+This is a full-stack web application inspired by [Zerodha](https://zerodha.com/), built to simulate a real-time stock trading and monitoring experience. It includes user onboarding, stock visualization, market monitoring, portfolio management — all powered by the MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
 ---
 
