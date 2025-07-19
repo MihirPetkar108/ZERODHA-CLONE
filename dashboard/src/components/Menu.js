@@ -103,8 +103,8 @@ const Menu = () => {
                 </ul>
                 <hr />
                 <div className="profile" onClick={handleProfileClick}>
-                    <div className="avatar">ZU</div>
-                    <p className="username">USERID</p>
+                    <div className="avatar">MP</div>
+                    <p className="username">Mihir Petkar</p>
                 </div>
             </div>
         </div>

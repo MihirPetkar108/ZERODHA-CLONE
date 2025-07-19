@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import GeneralContext from "./GeneralContext";
 import { Tooltip, Zoom } from "@mui/material";
 import { watchlist } from "../data/data";
 import {
@@ -74,6 +75,15 @@ const WatchListItem = ({ stock }) => {
 };
 
 const WatchListACtions = ({ uid }) => {
+    const generalContext = useContext(GeneralContext);
+
+    const handleBuyClick = () => {
+        generalContext.openBuyWindow(uid);
+    };
+
+    const handleSellClick = () => {
+        generalContext.openSellWindow(uid);
+    };
     return (
         <span className="actions">
             <div className="action-buttons">
@@ -82,6 +92,7 @@ const WatchListACtions = ({ uid }) => {
                     placement="top"
                     arrow
                     TransitionComponent={Zoom}
+                    onClick={handleBuyClick}
                 >
                     <button className="buy">Buy</button>
                 </Tooltip>
@@ -91,6 +102,7 @@ const WatchListACtions = ({ uid }) => {
                     placement="top"
                     arrow
                     TransitionComponent={Zoom}
+                    onClick={handleSellClick}
                 >
                     <button className="sell">Sell</button>
                 </Tooltip>

@@ -1,8 +1,17 @@
-import React from "react";
-
-import { holdings } from "../data/data.js";
+import React, { useContext, useEffect } from "react";
+import axios from "axios";
+import HoldingsContext from "./HoldingsContext";
 
 const Holdings = () => {
+    const { holdings, setHoldings } = useContext(HoldingsContext);
+
+    useEffect(() => {
+        axios.get("http://localhost:3000/addHoldings").then((res) => {
+            setHoldings(res.data);
+            console.log("Holdings fetched successfully");
+        });
+    }, [setHoldings]);
+
     return (
         <>
             <h3 className="title">Holdings ({holdings.length})</h3>
